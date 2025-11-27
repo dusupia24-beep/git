@@ -80,6 +80,7 @@
             // 
             // listView1
             // 
+            this.listView1.BackColor = System.Drawing.SystemColors.Window;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -98,12 +99,12 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "문제 제목";
-            this.columnHeader1.Width = 590;
+            this.columnHeader1.Width = 550;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "개수";
-            this.columnHeader2.Width = 100;
+            this.columnHeader2.Text = "문제 개수";
+            this.columnHeader2.Width = 140;
             // 
             // columnHeader3
             // 

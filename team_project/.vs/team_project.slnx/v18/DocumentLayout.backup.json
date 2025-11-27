@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\c#_workspace\\team_project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2D0DBCBE-9503-4B44-B81C-71E708A4EBC8}|team_project\\team_project.csproj|c:\\c#_workspace\\team_project\\team_project\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D0DBCBE-9503-4B44-B81C-71E708A4EBC8}|team_project\\team_project.csproj|solutionrelative:team_project\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D0DBCBE-9503-4B44-B81C-71E708A4EBC8}|team_project\\team_project.csproj|c:\\c#_workspace\\team_project\\team_project\\solvelistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D0DBCBE-9503-4B44-B81C-71E708A4EBC8}|team_project\\team_project.csproj|solutionrelative:team_project\\solvelistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D0DBCBE-9503-4B44-B81C-71E708A4EBC8}|team_project\\team_project.csproj|c:\\c#_workspace\\team_project\\team_project\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2D0DBCBE-9503-4B44-B81C-71E708A4EBC8}|team_project\\team_project.csproj|solutionrelative:team_project\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2D0DBCBE-9503-4B44-B81C-71E708A4EBC8}|team_project\\team_project.csproj|c:\\c#_workspace\\team_project\\team_project\\previewform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D0DBCBE-9503-4B44-B81C-71E708A4EBC8}|team_project\\team_project.csproj|solutionrelative:team_project\\previewform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,27 +27,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\c#_workspace\\team_project\\team_project\\MainForm.cs",
-              "RelativeDocumentMoniker": "team_project\\MainForm.cs",
-              "ToolTip": "C:\\c#_workspace\\team_project\\team_project\\MainForm.cs*",
-              "RelativeToolTip": "team_project\\MainForm.cs*",
-              "ViewState": "AgIAADgAAAAAAAAAAAAkwFIAAAAFAAAAAAAAAA==",
+              "Title": "SolveListForm.cs",
+              "DocumentMoniker": "C:\\c#_workspace\\team_project\\team_project\\SolveListForm.cs",
+              "RelativeDocumentMoniker": "team_project\\SolveListForm.cs",
+              "ToolTip": "C:\\c#_workspace\\team_project\\team_project\\SolveListForm.cs*",
+              "RelativeToolTip": "team_project\\SolveListForm.cs*",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAQwFEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T04:07:46.84Z",
+              "WhenOpened": "2025-11-27T14:12:27.846Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MainForm.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\c#_workspace\\team_project\\team_project\\MainForm.cs",
-              "RelativeDocumentMoniker": "team_project\\MainForm.cs",
-              "ToolTip": "C:\\c#_workspace\\team_project\\team_project\\MainForm.cs [\uB514\uC790\uC778]*",
-              "RelativeToolTip": "team_project\\MainForm.cs [\uB514\uC790\uC778]*",
+              "Title": "PreviewForm.cs",
+              "DocumentMoniker": "C:\\c#_workspace\\team_project\\team_project\\PreviewForm.cs",
+              "RelativeDocumentMoniker": "team_project\\PreviewForm.cs",
+              "ToolTip": "C:\\c#_workspace\\team_project\\team_project\\PreviewForm.cs",
+              "RelativeToolTip": "team_project\\PreviewForm.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAiwKsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T04:07:25.613Z",
-              "EditorCaption": " [\uB514\uC790\uC778]"
+              "WhenOpened": "2025-11-27T14:11:07.874Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -63,4 +63,17 @@ namespace team_project
         public OxQuestionData() { }
         public bool? AnswerIsO { get; set; }// true: O, false: X, null: 미설정
     }
+
+    public class QuestionSetData
+    {
+        // JSON 키 이름과 동일하게 소문자 't'를 사용합니다.
+        public string title { get; set; }
+        public int totalCount { get; set; }
+
+        // ⚠️ 수정: 단일 문자열이 아닌 문자열 리스트로 변경합니다.
+        public List<string> types { get; set; }
+
+        // BaseQuestionData의 파생 클래스 리스트는 그대로 유지합니다.
+        public List<BaseQuestionData> questions { get; set; }
+    }
 }

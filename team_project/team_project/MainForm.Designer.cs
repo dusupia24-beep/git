@@ -38,7 +38,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("굴림", 30F);
-            this.button1.Location = new System.Drawing.Point(401, 384);
+            this.button1.Location = new System.Drawing.Point(396, 539);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(216, 102);
             this.button1.TabIndex = 0;
@@ -49,9 +49,9 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("굴림", 30F);
-            this.button2.Location = new System.Drawing.Point(642, 390);
+            this.button2.Location = new System.Drawing.Point(653, 539);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(215, 91);
+            this.button2.Size = new System.Drawing.Size(216, 102);
             this.button2.TabIndex = 1;
             this.button2.Text = "문제풀기";
             this.button2.UseVisualStyleBackColor = true;
@@ -60,6 +60,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("굴림", 52F);
             this.label1.Location = new System.Drawing.Point(480, 203);
             this.label1.Name = "label1";

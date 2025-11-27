@@ -6,7 +6,6 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Text.Json;
 using System.Windows.Forms;
 
@@ -26,18 +25,48 @@ namespace team_project
 
             _allQuestionSets = LoadQuestionSetInfos(folderPath, fileNames);
 
-            // ⭐ ListView를 사용하는 새 메서드로 변경
             DisplayFileList(_allQuestionSets);
+        }
 
+        // ⭐ C# 7.3 호환: switch 표현식 대신 if-else if 구문 사용
+        private static string ConvertTypeToKorean(string type)
+        {
+            string trimmedType = type.Trim().ToLower();
 
-            // 📝 SearchText_TextChanged 이벤트 핸들러는 그대로 유지됩니다.
+            if (trimmedType == "short")
+            {
+                return "단답형";
+            }
+            else if (trimmedType == "single")
+            {
+                return "객관형";
+            }
+            else if (trimmedType == "ox")
+            {
+                return "OX";
+            }
+            else if (trimmedType == "multiple")
+            {
+                return "객관형(복수정답)";
+            }
+            // 매칭되지 않으면 원래 문자열 반환
+            return type;
+        }
+
+        // List<string> 영문 유형 목록을 한글 문자열로 결합하는 메서드
+        private static string GetProblemTypesString(List<string> types)
+        {
+            if (types == null || types.Count == 0)
+            {
+                return "유형 없음";
+            }
+            // 각 영문 유형을 한글로 변환 후, 콤마와 공백으로 연결
+            var koreanTypes = types.Select(ConvertTypeToKorean).ToList();
+            return string.Join(", ", koreanTypes);
         }
 
 
-
-
-
-        // ⭐ QuestionSetInfo 클래스는 그대로 유지합니다. (ListView의 Tag에 저장할 데이터 모델)
+        // QuestionSetInfo 클래스는 그대로 유지합니다.
         public class QuestionSetInfo
         {
             public string title { get; set; }
@@ -45,8 +74,6 @@ namespace team_project
             public List<string> types { get; set; }
             public string FileName { get; set; }
 
-            // ListBox가 아닌 ListView를 사용하므로, ToString() 오버라이드는 항목 표시에 사용되지 않습니다.
-            // 하지만 디버깅 용도로 유지하거나 삭제할 수 있습니다.
             public override string ToString()
             {
                 string typesString = types != null ? string.Join(", ", types) : "유형 없음";
@@ -54,11 +81,7 @@ namespace team_project
             }
         }
 
-
-
-
-
-        // ⭐ LoadQuestionSetInfos 메서드는 그대로 유지됩니다. (데이터 로드 로직)
+        // LoadQuestionSetInfos 메서드는 그대로 유지됩니다.
         private List<QuestionSetInfo> LoadQuestionSetInfos(string folderPath, List<string> fileNames)
         {
             var questionSets = new List<QuestionSetInfo>();
@@ -88,33 +111,28 @@ namespace team_project
             return questionSets;
         }
 
-        // 🟢 수정: ListView에 항목을 표시하는 메서드
+        // ListView에 항목을 표시하는 메서드
         private void DisplayFileList(List<QuestionSetInfo> questionSets)
         {
-            this.listView1.Items.Clear(); // ❌ listBox1.Items.Clear() -> listView1.Items.Clear()
+            this.listView1.Items.Clear();
 
             foreach (QuestionSetInfo info in questionSets)
             {
-                string typesString = info.types != null ? string.Join(", ", info.types) : "유형 없음";
+                // 한글 유형 문자열 사용
+                string typesString = GetProblemTypesString(info.types);
 
-                // 1. 새로운 ListViewItem을 생성하고 첫 번째 열(문제 제목)을 설정
                 ListViewItem item = new ListViewItem(info.title);
 
-                // 2. 두 번째 이후의 열(SubItems)을 추가
                 item.SubItems.Add($"{info.totalCount}개"); // 개수
-                item.SubItems.Add(typesString);             // 유형들
+                item.SubItems.Add(typesString);             // 한글 유형들
 
-                // 3. QuestionSetInfo 객체 전체를 Tag 속성에 저장 (더블 클릭 시 사용)
                 item.Tag = info;
 
-                // 4. ListView에 항목 추가
                 this.listView1.Items.Add(item);
             }
-            // 모든 항목을 추가한 후 열 너비를 자동으로 조정할 수도 있습니다.
-            // this.listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
 
-        // ⭐ 검색 텍스트 변경 이벤트 핸들러 (ListView에 맞게 로직 수정)
+        // 검색 텍스트 변경 이벤트 핸들러는 그대로 유지됩니다.
         private void SearchText_TextChanged(object sender, EventArgs e)
         {
             string searchTerm = SearchText.Text.Trim();
@@ -135,22 +153,75 @@ namespace team_project
             }
         }
 
-        // 🟢 수정: ListView 더블 클릭 이벤트 핸들러
+        // ListView 더블 클릭 이벤트 핸들러
         private void listView1_DoubleClick(object sender, EventArgs e)
         {
-            // ListView는 SelectedItems 컬렉션을 사용하며, Details 모드에서는 일반적으로 첫 번째 항목을 사용합니다.
+            BaseQuestionData firstQuestion = null;
+
             if (this.listView1.SelectedItems.Count > 0)
             {
-                // 선택된 ListViewItem을 가져옵니다.
                 ListViewItem selectedItem = this.listView1.SelectedItems[0];
 
-                // Tag 속성에 저장했던 QuestionSetInfo 객체를 가져옵니다.
                 if (selectedItem.Tag is QuestionSetInfo selectedInfo)
                 {
+                    string problemTitle = selectedInfo.title;
                     string selectedFile = selectedInfo.FileName;
                     string fullPath = Path.Combine(_questionFolderPath, selectedFile + ".json");
 
-                    MessageBox.Show($"선택된 파일: {selectedFile}.json (제목: {selectedInfo.title})\n이제 이 파일을 로드하여 문제 풀이 폼을 열어야 합니다.", "문제 풀이 시작");
+                    int totalProblems = 0;
+                    string problemTypes = "데이터 없음";
+
+                    if (File.Exists(fullPath))
+                    {
+                        try
+                        {
+                            string jsonString = File.ReadAllText(fullPath);
+
+                            var options = new JsonSerializerOptions
+                            {
+                                PropertyNameCaseInsensitive = true
+                            };
+
+                            // ⭐ 주의: System.Text.Json의 다형성 처리(BaseQuestionData의 하위 클래스 로드)는 
+                            // C# 버전보다는 .NET 런타임 버전(>=.NET 6)에 더 의존합니다. 
+                            // 현재 코드가 .NET 6/7/8 환경이라면 문제 없으나, .NET Framework 환경이라면 
+                            // 여기에서 문제가 발생할 수 있으며, 이 경우 Newtonsoft.Json 등의 외부 라이브러리를 사용해야 합니다.
+                            QuestionSetData data = JsonSerializer.Deserialize<QuestionSetData>(jsonString, options);
+
+                            if (data != null)
+                            {
+                                totalProblems = data.totalCount;
+
+                                if (data.types != null && data.types.Count > 0)
+                                {
+                                    problemTypes = GetProblemTypesString(data.types);
+                                }
+
+                                if (data.questions != null && data.questions.Count > 0)
+                                {
+                                    firstQuestion = data.questions[0];
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"문제 로드 중 오류 발생: {ex.Message}", "오류");
+                            return;
+                        }
+                    }
+
+                    // PreviewForm 인스턴스 생성 및 한글 유형 데이터 전달
+                    PreviewForm previewForm = new PreviewForm(
+                        problemTitle,
+                        totalProblems,
+                        problemTypes,
+                        firstQuestion
+                    );
+
+                    // 폼 전환
+                    this.Hide();
+                    previewForm.ShowDialog();
+                    this.Show();
                 }
             }
         }

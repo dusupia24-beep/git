@@ -45,6 +45,7 @@
             this.Cancel.TabIndex = 4;
             this.Cancel.Text = "뒤로가기";
             this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // SolveBtn
             // 
@@ -77,9 +78,10 @@
             // 
             // PreviewPanel
             // 
-            this.PreviewPanel.Location = new System.Drawing.Point(12, 145);
+            this.PreviewPanel.BackColor = System.Drawing.Color.Transparent;
+            this.PreviewPanel.Location = new System.Drawing.Point(98, 168);
             this.PreviewPanel.Name = "PreviewPanel";
-            this.PreviewPanel.Size = new System.Drawing.Size(1240, 466);
+            this.PreviewPanel.Size = new System.Drawing.Size(1062, 391);
             this.PreviewPanel.TabIndex = 9;
             // 
             // PreviewLabel
@@ -96,6 +98,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::team_project.Properties.Resources.back1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.PreviewLabel);
             this.Controls.Add(this.PreviewPanel);
@@ -103,6 +107,7 @@
             this.Controls.Add(this.FixBtn);
             this.Controls.Add(this.SolveBtn);
             this.Controls.Add(this.Cancel);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "PreviewForm";

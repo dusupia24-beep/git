@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\c#_workspace\\team_project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2D0DBCBE-9503-4B44-B81C-71E708A4EBC8}|team_project\\team_project.csproj|c:\\c#_workspace\\team_project\\team_project\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D0DBCBE-9503-4B44-B81C-71E708A4EBC8}|team_project\\team_project.csproj|solutionrelative:team_project\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D0DBCBE-9503-4B44-B81C-71E708A4EBC8}|team_project\\team_project.csproj|c:\\c#_workspace\\team_project\\team_project\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2D0DBCBE-9503-4B44-B81C-71E708A4EBC8}|team_project\\team_project.csproj|solutionrelative:team_project\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\c#_workspace\\team_project\\team_project\\MainForm.cs",
+              "RelativeDocumentMoniker": "team_project\\MainForm.cs",
+              "ToolTip": "C:\\c#_workspace\\team_project\\team_project\\MainForm.cs*",
+              "RelativeToolTip": "team_project\\MainForm.cs*",
+              "ViewState": "AgIAADgAAAAAAAAAAAAkwFIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T04:07:46.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainForm.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\c#_workspace\\team_project\\team_project\\MainForm.cs",
+              "RelativeDocumentMoniker": "team_project\\MainForm.cs",
+              "ToolTip": "C:\\c#_workspace\\team_project\\team_project\\MainForm.cs [\uB514\uC790\uC778]*",
+              "RelativeToolTip": "team_project\\MainForm.cs [\uB514\uC790\uC778]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T04:07:25.613Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

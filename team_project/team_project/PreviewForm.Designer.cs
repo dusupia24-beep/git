@@ -56,6 +56,7 @@
             this.SolveBtn.TabIndex = 6;
             this.SolveBtn.Text = "바로 풀기";
             this.SolveBtn.UseVisualStyleBackColor = true;
+            this.SolveBtn.Click += new System.EventHandler(this.SolveBtn_Click);
             // 
             // FixBtn
             // 

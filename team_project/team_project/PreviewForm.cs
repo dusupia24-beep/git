@@ -167,5 +167,11 @@ namespace team_project
         {
             this.Close();   
         }
+
+        private void SolveBtn_Click(object sender, EventArgs e)
+        {
+            QuizForm quizForm = new QuizForm();
+            quizForm.ShowDialog();
+        }
     }
 }

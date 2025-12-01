@@ -35,3 +35,4 @@ C:\c#_workspace\team_project\team_project\bin\Debug\System.Threading.Tasks.Exten
 C:\c#_workspace\team_project\team_project\obj\Debug\team_pro.AB625DF9.Up2Date
 C:\c#_workspace\team_project\team_project\obj\Debug\team_project.SolveListForm.resources
 C:\c#_workspace\team_project\team_project\obj\Debug\team_project.PreviewForm.resources
+C:\c#_workspace\team_project\team_project\obj\Debug\team_project.QuizForm.resources

@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\c#_workspace\\team_project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2D0DBCBE-9503-4B44-B81C-71E708A4EBC8}|team_project\\team_project.csproj|c:\\c#_workspace\\team_project\\team_project\\solvelistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D0DBCBE-9503-4B44-B81C-71E708A4EBC8}|team_project\\team_project.csproj|solutionrelative:team_project\\solvelistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D0DBCBE-9503-4B44-B81C-71E708A4EBC8}|team_project\\team_project.csproj|c:\\c#_workspace\\team_project\\team_project\\previewform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D0DBCBE-9503-4B44-B81C-71E708A4EBC8}|team_project\\team_project.csproj|solutionrelative:team_project\\previewform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D0DBCBE-9503-4B44-B81C-71E708A4EBC8}|team_project\\team_project.csproj|c:\\c#_workspace\\team_project\\team_project\\quizform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2D0DBCBE-9503-4B44-B81C-71E708A4EBC8}|team_project\\team_project.csproj|solutionrelative:team_project\\quizform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,28 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SolveListForm.cs",
-              "DocumentMoniker": "C:\\c#_workspace\\team_project\\team_project\\SolveListForm.cs",
-              "RelativeDocumentMoniker": "team_project\\SolveListForm.cs",
-              "ToolTip": "C:\\c#_workspace\\team_project\\team_project\\SolveListForm.cs*",
-              "RelativeToolTip": "team_project\\SolveListForm.cs*",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAQwFEAAAAJAAAAAAAAAA==",
+              "Title": "QuizForm.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\c#_workspace\\team_project\\team_project\\QuizForm.cs",
+              "RelativeDocumentMoniker": "team_project\\QuizForm.cs",
+              "ToolTip": "C:\\c#_workspace\\team_project\\team_project\\QuizForm.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "team_project\\QuizForm.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T14:12:27.846Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PreviewForm.cs",
-              "DocumentMoniker": "C:\\c#_workspace\\team_project\\team_project\\PreviewForm.cs",
-              "RelativeDocumentMoniker": "team_project\\PreviewForm.cs",
-              "ToolTip": "C:\\c#_workspace\\team_project\\team_project\\PreviewForm.cs",
-              "RelativeToolTip": "team_project\\PreviewForm.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAiwKsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T14:11:07.874Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T05:40:33.706Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
             }
           ]
         }
